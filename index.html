@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf‑8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CognitiveArm – Intelligent Collaboration</title>
+
+<!-- ===== CSS ===== -->
+<style>
+/* 1️⃣  Colour palette (deep thinking + collaboration) */
+:root{
+  --primary:#1E3A5F;      /* deep navy – thinking */
+  --secondary:#2E5C8A;    /* muted teal – collaboration */
+  --accent:#3F8ECA;        /* light sky – sophistication */
+  --background:#F4F4F4;   /* gentle off‑white */
+  --text-dark:#111111;    /* near‑black */
+  --text-light:#FFFFFF;   /* white for accents */
+  --border:#E0E0E0;
+}
+
+/* 2️⃣  Global resets & typography */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:var(--background);color:var(--text-dark);}
+a{color:var(--accent);text-decoration:none;transition:color .2s;}
+a:hover{color:var(--secondary);}
+
+/* 3️⃣  Layout */
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:var(--primary);color:var(--text-light);}
+header svg{height:3rem;width:3rem;}
+header h1{font-size:1.5rem;}
+main{max-width:960px;margin:auto;padding:2rem 1rem;}
+section{margin-bottom:3rem;}
+section h2{font-size:1.8rem;margin-bottom:.5rem;}
+section p{line-height:1.6;}
+
+/* 4️⃣  Footer */
+footer{background:var(--primary);color:var(--text-light);text-align:center;padding:2rem 1rem;}
+footer a{color:var(--accent);display:block;margin-top:.5rem;}
+footer small{display:block;margin-top:.8rem;font-size:.9rem;}
+
+/* 5️⃣  Responsive tweaks */
+@media(min-width:768px){
+  header{padding:1rem 4rem;}
+  main{padding:3rem 2rem;}
+}
+</style>
+</head>
+
+<body>
+<!-- ===== HEADER + LOGO ===== -->
+<header>
+  <!-- inline svg logo -->
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <!-- centre node -->
+    <circle cx="60" cy="60" r="12" fill="var(--accent)"/>
+    <!-- outer nodes -->
+    <circle cx="30" cy="30" r="6" fill="var(--accent)"/>
+    <circle cx="90" cy="30" r="6" fill="var(--accent)"/>
+    <circle cx="30" cy="90" r="6" fill="var(--accent)"/>
+    <!-- lines -->
+    <path d="M60 60 L30 30" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M60 60 L90 30" stroke="var(--accent)" stroke-width="1"/>
+    <path d="M60 60 L30 90" stroke="var(--accent)" stroke-width="1"/>
+  </svg>
+  <h1>CognitiveArm</h1>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+  <section id="hero">
+    <h2>Intelligence, Together.</h2>
+    <p>At CognitiveArm we build AI systems that think, learn and collaborate – empowering teams to solve the toughest problems.</p>
+  </section>
+
+  <section id="what">
+    <h2>What We Do</h2>
+    <ul>
+      <li>Custom neural‑net architectures</li>
+      <li>Scalable data pipelines</li>
+      <li>Insight‑driven product roadmaps</li>
+    </ul>
+  </section>
+
+  <section id="why">
+    <h2>Why CognitiveArm?</h2>
+    <p>Because collaboration is not just a buzzword – it’s the engine of breakthrough. We blend deep‑learning rigor with a people‑first mindset.</p>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <a href="tel:+610484053469">Phone: +61 484 053 469</a>
+  <a href="mailto:cognitivearm@gmail.com">Email: cognitivearm@gmail.com</a>
+  <small>&copy; 2026 CognitiveArm. All rights reserved.</small>
+</footer>
+
+<!-- ===== CLIENT‑SIDE JS (simple fade‑in) ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('section, footer');
+  els.forEach((el, i) => {
+    el.style.opacity = 0;
+    setTimeout(() => el.style.opacity = 1, 200 + i * 100);
+  });
+});
+</script>
+</body>
+</html>
